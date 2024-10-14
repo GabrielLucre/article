@@ -1,0 +1,12 @@
+services:
+  postgres:
+    container_name: postgres-article
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: article
+    volumes:
+      - ./data:/data/postgres
+    ports:
+      - "5432:5432"
